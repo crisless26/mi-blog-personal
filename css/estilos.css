@@ -1,0 +1,93 @@
+/* Configuración general y colores */
+body {
+    background-color: #1d1a2f; /* Fondo oscuro */
+    color: #e1e1e6;            /* Texto claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Contenedor centrado */
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabecera */
+header {
+    background-color: #734f9a;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #079534; /* Línea verde estilo terminal */
+}
+
+header h1 {
+    margin: 0;
+    color: #8bd450;
+}
+
+nav a {
+    color: #3c0d6e;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Sección del Feed y los Posts */
+.presentacion {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.post {
+    background-color: #1f2024;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.fecha {
+    color: #7c7c8a;
+    font-size: 0.9rem;
+}
+
+/* Control de la imagen para que no se deforme */
+.post-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 15px 0;
+    display: block;
+}
+
+/* Botón de Me Gusta */
+.btn-like {
+    background-color: #29292e;
+    color: #fff;
+    border: 1px solid #4d4d57;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-like:hover {
+    background-color: #04d361;
+    color: #121214;
+    font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #7c7c8a;
+    font-size: 0.85rem;
+}
