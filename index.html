@@ -1,64 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Bitácora Personal</title>
+    <title>Mi Espacio Digital | crisless26</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        <h1>Mi Espacio  Digital</h1>
+
+    <header class="navbar">
+        <div class="logo">crisless26</div>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="Sobre-mi.html">Sobre mi</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#bitacora">Bitácora</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto" class="btn-redes">Redes Sociales</a>
         </nav>
     </header>
-    <main class="contenedor">
-        <selection class="presentacion">
-            <h2>Hola soy programador</h2>
-            <p>Bienvenido a mi bitácora. Aquí comparto mis gustos, fotos de mis entornos de desarrollo y mis comentarios sobre tecnología.</p>
-        </selection>
-        <selection>
-            <h2>Mis publicaciones</h2>
-            <!-- post 1-->
-            <article class="post">
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Hola, soy Cris (a.k.a. crisless26)</h1>
+            <p>Bienvenido a mi bitácora técnica. Aquí documento mis gustos, mis experimentos y mi viaje por el mundo del código.</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn-cta">Ver proyectos destacados</a>
+                <a href="#contacto" class="btn-cta secondary">Contáctame</a>
+            </div>
+        </section>
+
+        <section id="bitacora" class="contenedor-posts">
+            <h2>Bitácora</h2>
+            
+            <article class="post-card">
+                <div class="post-img-container">
+                    <img src="assets/img/imgCris.jpg" alt="Foto Propia" class="post-img">
+                </div>
                 <h3>Prueba de primer post</h3>
                 <p class="fecha">Publicado el 9 de Julio, 2026</p>
-                <img src="assets/img/imgCris.jpg" alt="Foto Propia" class="post-img">
-                <p>Hola mi nombre es cris</p>
-                <p>cree esta pagina como una especie espacio personal y para practica un poco la programacion web</p>
-                <p>primera prueba de post con texto y una iamgen , en este caso una foto vieja mia</p>
-                <button class="btn-like">❤️ <span id="like-count">0</span> Me gusta</button>
+                <p>Hola mi nombre es cris. Espacio personal para practicar web...</p>
+                <div class="post-actions">
+                    <a href="#" class="btn-read">Leer artículo completo</a>
+                    <button class="btn-comments">Comentarios (0)</button>
+                </div>
+                <a href="#" class="next-post">Siguiente publicación →</a>
             </article>
 
-            <!-- post 2-->
-            <article class="post">
-                <h3>Prueba de post Video</h3>
-                <p class="fecha">Publicado el 9 de Julio, 2026</p>
-                <video width="350" height="350" controls autoplay muted loop>
-                    <source src="assets/video/video1.mp4" type="video/mp4">
-                </video>
-                <p>wow la verdad crei que seria algo dificil pero no quedo nada mal</p>
-                <p>este es un gif pro en .mp4 y pues es de la cancion broken de gorillaz</p>
-                <p>me gusta gorillaz ❤️</p>
-                <button class="btn-like">❤️ <span id="like-count">0</span> Me gusta</button>
-            </article>
-            
-            <!-- post 2-->
-            <article class="post">
-                <h3>Mi primera publicación de práctica</h3>
-                <p class="fecha">Publicado el 9 de Julio, 2026</p>
-                <img src="assets/img/imgCris.jpg" alt="Foto Propia" class="post-img">
-                <p>Hoy oficialmente empecé a programar mi blog personal desde cero usando HTML y CSS en mi laptop con FydeOS. ¡Es un gran inicio!</p>
-                <button class="btn-like">❤️ <span id="like-count">0</span> Me gusta</button>
-            </article>
-
-        </selection>
+            </section>
     </main>
-    <footer>
-        <p>&copy; 2026 - Creado con fines de práctica web</p>
+
+    <footer id="contacto">
+        <div class="social-links">
+            <a href="https://github.com/crisless26" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a>
+        </div>
+        <p>Hecho con <3 por crisless26</p>
+        <a href="feed.xml" class="rss-icon">RSS</a>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
