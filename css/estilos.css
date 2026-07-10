@@ -1,93 +1,81 @@
-/* Configuración general y colores */
+/* --- Variables de Diseño EVA-01 --- */
+:root {
+    --eva-morado: #2d1b4e;
+    --eva-morado-oscuro: #160a2b;
+    --eva-verde: #a4ff00;
+    --eva-naranja: #ff7b00;
+    --texto-blanco: #e0e0e0;
+}
+
 body {
-    background-color: #1d1a2f; /* Fondo oscuro */
-    color: #e1e1e6;            /* Texto claro */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--eva-morado-oscuro);
+    color: var(--texto-blanco);
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    padding: 0;
     line-height: 1.6;
 }
 
-/* Contenedor centrado */
-.contenedor {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+/* Navbar */
+.navbar {
+    background-color: var(--eva-morado);
+    position: sticky;
+    top: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--eva-verde);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Cabecera */
-header {
-    background-color: #734f9a;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 5px solid #079534; /* Línea verde estilo terminal */
-}
-
-header h1 {
-    margin: 0;
-    color: #8bd450;
-}
-
-nav a {
-    color: #3c0d6e;
+.navbar a {
+    color: var(--texto-blanco);
     text-decoration: none;
-    margin: 0 10px;
+    margin-left: 20px;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #ffffff;
+.navbar a:hover {
+    color: var(--eva-verde);
 }
 
-/* Sección del Feed y los Posts */
-.presentacion {
-    margin: 40px 0;
+/* Hero Section */
+.hero {
     text-align: center;
+    padding: 80px 20px;
+    border-bottom: 1px solid var(--eva-morado);
 }
 
-.post {
-    background-color: #1f2024;
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.fecha {
-    color: #7c7c8a;
-    font-size: 0.9rem;
-}
-
-/* Control de la imagen para que no se deforme */
-.post-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin: 15px 0;
-    display: block;
-}
-
-/* Botón de Me Gusta */
-.btn-like {
-    background-color: #29292e;
-    color: #fff;
-    border: 1px solid #4d4d57;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.btn-like:hover {
-    background-color: #04d361;
-    color: #121214;
+.btn-cta {
+    background-color: var(--eva-verde);
+    color: var(--eva-morado-oscuro);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
     font-weight: bold;
+    margin: 5px;
+    display: inline-block;
 }
 
-/* Pie de página */
+/* Blog Cards */
+.post-card {
+    background-color: var(--eva-morado);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-left: 5px solid var(--eva-verde);
+    border-radius: 0 10px 10px 0;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--eva-naranja);
+}
+
 footer {
     text-align: center;
-    padding: 20px;
-    color: #7c7c8a;
-    font-size: 0.85rem;
+    padding: 2rem;
+    background-color: var(--eva-morado-oscuro);
+    border-top: 2px solid var(--eva-verde);
 }
