@@ -127,6 +127,16 @@ footer {
     text-decoration: none;
 }
 
+/* --- Estilos de la Página Multimedia --- */
+.multimedia-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.multimedia-header h1 {
+    color: var(--eva-verde);
+}
+
 /* --- Estilos de la Biblioteca de Dibujos --- */
 
 /* Encabezado de la página de biblioteca: centra el título y la descripción */
@@ -268,6 +278,17 @@ footer {
     padding: 30px;
     border: 2px solid var(--eva-verde);
     border-left: 4px solid var(--eva-verde); /* Color verde NERV / EVA-01 */
+}
+
+.foto-perfil img {
+    max-width: 200px;
+    border: 2px solid #a5f80b;
+}
+
+.grid-tech {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .tech-card {
