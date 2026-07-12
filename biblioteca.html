@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <!-- Cabecera de navegación (Navbar): Barra superior fija con enlaces del sitio -->
     <header class="navbar">
         <div class="logo">CrisLoQueSea</div>
         <nav>
@@ -19,14 +20,17 @@
         </nav>
     </header>
 
+    <!-- Contenido principal: sección de biblioteca y galería de dibujos -->
     <main>
+        <!-- Encabezado de la Biblioteca con título y descripción -->
         <section class="biblioteca-header">
             <h1>Biblioteca de Dibujos</h1>
             <p>Aquí recopilo mis trabajos digitales. Estética y técnica.</p>
         </section>
 
-        <!-- Esta es la cuadrícula que nos interesa -->
+        <!-- Cuadrícula (Grid) de la Galería: contiene cada una de las tarjetas de los dibujos -->
         <section class="galeria-grid">
+            <!-- Cada div 'dibujo-card' representa una tarjeta de imagen en la galería -->
             <div class="dibujo-card">
                 <img src="assets/img/dibujo1.jpg" alt="Dibujo 1">
             </div>
@@ -81,15 +85,19 @@
             <div class="dibujo-card">
                 <img src="assets/img/dibujo18.png" alt="Dibujo 18">
             </div>
-            <!-- Agrega más bloques como estos -->
         </section>
     </main>
 
-        <!--Area de modal zoom-->
-        <div id="modal-zoom" class="modal">
+    <!-- Área de Modal de Zoom: se abre dinámicamente mediante JS al hacer clic en cualquier dibujo -->
+    <div id="modal-zoom" class="modal">
+        <!-- Botón para cerrar el modal (X) -->
         <span class="cerrar">&times;</span>
+        
+        <!-- Flechas de navegación para navegar entre imágenes -->
         <a class="prev">&#10094;</a>
         <a class="next">&#10095;</a>
+        
+        <!-- Botón para descargar el dibujo activo, con icono SVG de descarga -->
         <a id="btn-descargar" href="#" download class="btn-descargar" title="Descargar imagen">
             <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -97,10 +105,13 @@
                 <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
         </a>
-        <img class="modal-content" id="img-ampliada">
+        
+        <!-- Imagen ampliada que se muestra en el modal -->
+        <img class="modal-content" id="img-ampliada" alt="Imagen ampliada">
     </div>
-    <!--Area de links para redes sociales-->
-     <footer id="redes">
+
+    <!-- Pie de página (Footer) con enlaces a redes sociales y créditos -->
+    <footer id="redes">
         <div class="social-links">
             <a href="https://www.facebook.com/MestMartin?locale=es_LA" target="_blank">Facebook</a>
             <a href="https://www.instagram.com/crisloquesea/" target="_blank">Instagram Personal</a>
@@ -111,6 +122,7 @@
         <p>Hecho con 💜 por CrisLoQueSea</p>
     </footer>
     
+    <!-- Enlace al archivo JavaScript principal con la lógica interactiva -->
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <!-- Cabecera de navegación (Navbar): barra superior fija con enlaces a las secciones principales -->
     <header class="navbar">
         <div class="logo">CrisLoQueSea</div>
         <nav>
@@ -19,32 +20,36 @@
         </nav>
     </header>
 
+    <!-- Contenido principal de la página -->
     <main>
+        <!-- Sección de bienvenida (Hero Section) con llamada a la acción -->
         <section id="inicio" class="hero">
             <h1>Hola, soy CrisLoQueSea</h1>
             <p>Bienvenido a mi espacio digital.</p>
-            <p>Aqui comparto mis dibujos, mis curiosidades y las cosas que me gustan.</p>
+            <p>Aquí comparto mis dibujos, mis curiosidades y las cosas que me gustan.</p>
             <div class="hero-buttons">
                 <a href="multimedia.html" class="btn-cta">Explorar Multimedia</a>
                 <a href="#redes" class="btn-cta secondary">Mis Redes</a>
             </div>
         </section>
 
+        <!-- Sección de publicaciones: muestra el feed de artículos recientes -->
         <section id="feed-reciente" class="contenedor-posts">
             <h2>Publicaciones Recientes</h2>
-            </section>
+            
+            <!-- Inicio Post: Artículo individual de prueba (Corregido: ahora está dentro de <main> y <section>) -->
+            <article class="post-card">
+                <h2>Prueba de post</h2>
+                <span class="fecha">10 de Julio, 2026</span>
+                <!-- Imagen del post (Corregido: se añade la clase 'post-img' definida en estilos.css) -->
+                <img src="assets/img/imgCris.jpg" alt="foto mia" class="post-img">
+                <p>Aquí puede ir una descripción de la publicación.</p>
+            </article>
+            <!-- fin Post -->
+        </section>
     </main>
 
-    <!--Inicio Post-->
-    <article class="post-card">
-        <h2>Prueba de post</h2>
-        <span class="fecha">10 de Julio, 2026</span>
-        <img src="assets/img/imgCris.jpg" alt="foto mia">
-        <p>aqui puede ir una descripcion de la publicacion.</p>
-    </article>
-    <!--fin Post-->
-
-        <!--Area de links para redes sociales-->
+    <!-- Pie de página (Footer) con enlaces a redes sociales y créditos -->
     <footer id="redes">
         <div class="social-links">
             <a href="https://www.facebook.com/MestMartin?locale=es_LA" target="_blank">Facebook</a>
@@ -56,6 +61,7 @@
         <p>Hecho con 💜 por CrisLoQueSea</p>
     </footer>
 
+    <!-- Enlace al archivo JavaScript principal con la lógica interactiva -->
     <script src="js/main.js"></script>
 </body>
 </html>
