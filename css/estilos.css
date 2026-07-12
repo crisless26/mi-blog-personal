@@ -191,3 +191,23 @@ footer {
     font-size: 40px;
     cursor: pointer;
 }
+
+/* Estilos para las flechas de navegación del modal */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--texto-blanco);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    user-select: none; /* Evita que el texto se seleccione */
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+.prev:hover, .next:hover { color: var(--eva-verde); }
+}

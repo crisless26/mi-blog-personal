@@ -22,24 +22,47 @@ botonLike.addEventListener('click', () => {
 // Obtener elementos
 const modal = document.getElementById("modal-zoom");
 const modalImg = document.getElementById("img-ampliada");
-const cerrarBtn = document.querySelector(".cerrar");
+const cerrarBtn = document.querySelector(".cerrar"); // Botón para cerrar
+const prevBtn = document.querySelector(".prev"); // Botón para imagen anterior
+const nextBtn = document.querySelector(".next"); // Botón para imagen siguiente
 
 // Seleccionar todas las imágenes de la galería
-document.querySelectorAll('.dibujo-card img').forEach(img => {
-    img.onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    }
+const galeriaImagenes = document.querySelectorAll('.dibujo-card img');
+let imagenActualIndex;
+
+// Función para abrir el modal con una imagen específica
+function abrirModal(index) {
+    modal.style.display = "block";
+    modalImg.src = galeriaImagenes[index].src;
+    imagenActualIndex = index;
+}
+
+// Asignar el evento de clic a cada imagen de la galería
+galeriaImagenes.forEach((img, index) => {
+    img.addEventListener('click', () => abrirModal(index));
 });
 
 // Cerrar al hacer clic en la X
-cerrarBtn.onclick = function() {
+cerrarBtn.addEventListener('click', () => {
     modal.style.display = "none";
-}
+});
 
 // Cerrar al hacer clic fuera de la imagen
-modal.onclick = function(event) {
+modal.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.style.display = "none";
     }
-}
+});
+
+// Navegación con flechas
+prevBtn.addEventListener('click', () => {
+    // Si es la primera imagen, vamos a la última. Si no, vamos a la anterior.
+    const nuevoIndex = (imagenActualIndex === 0) ? galeriaImagenes.length - 1 : imagenActualIndex - 1;
+    abrirModal(nuevoIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+    // Si es la última imagen, vamos a la primera. Si no, vamos a la siguiente.
+    const nuevoIndex = (imagenActualIndex === galeriaImagenes.length - 1) ? 0 : imagenActualIndex + 1;
+    abrirModal(nuevoIndex);
+});
