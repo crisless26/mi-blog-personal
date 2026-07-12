@@ -253,3 +253,49 @@ footer {
     filter: drop-shadow(0 0 8px var(--eva-naranja)) drop-shadow(0 0 15px var(--eva-naranja));
     transform: scale(1.15);
 }
+
+.perfil-piloto {
+    border: 2px solid var(--eva-verde); /* Tu verde neón */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    gap: 20px;
+}
+
+.tech-card {
+    border: 1px solid var(--eva-verde);
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    color: var(--eva-verde);
+    font-family: 'Courier New', monospace; /* Estilo terminal */
+}
+
+/* Efecto hover tipo "sistema activo" */
+.tech-card:hover {
+    background: var(--eva-verde);
+    color: black;
+    cursor: pointer;
+}
+
+.contenedor-sobre-mi {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.perfil-piloto {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-left: 4px solid #a5f80b; /* Color verde NERV */
+}
+
+.tech-card {
+    border: 1px solid #a5f80b;
+    padding: 10px 15px;
+    color: #a5f80b;
+    font-family: monospace;
+}
