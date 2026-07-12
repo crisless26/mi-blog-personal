@@ -19,3 +19,27 @@ botonLike.addEventListener('click', () => {
         botonLike.style.transform = 'scale(1)';
     }, 100);
 });
+// Obtener elementos
+const modal = document.getElementById("modal-zoom");
+const modalImg = document.getElementById("img-ampliada");
+const cerrarBtn = document.querySelector(".cerrar");
+
+// Seleccionar todas las imágenes de la galería
+document.querySelectorAll('.dibujo-card img').forEach(img => {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+});
+
+// Cerrar al hacer clic en la X
+cerrarBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Cerrar al hacer clic fuera de la imagen
+modal.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
