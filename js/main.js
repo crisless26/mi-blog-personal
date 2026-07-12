@@ -25,13 +25,21 @@ if (modal) {
     const cerrarBtn = document.querySelector(".cerrar");
     const prevBtn = document.querySelector(".prev");
     const nextBtn = document.querySelector(".next");
+    const descargarBtn = document.getElementById("btn-descargar");
     const galeriaImagenes = document.querySelectorAll('.dibujo-card img');
     let imagenActualIndex;
 
     // Función para abrir el modal con una imagen específica
     function abrirModal(index) {
         modal.style.display = "block";
-        modalImg.src = galeriaImagenes[index].src;
+        const src = galeriaImagenes[index].src;
+        modalImg.src = src;
+        if (descargarBtn) {
+            descargarBtn.href = src;
+            // Configurar el nombre del archivo para la descarga
+            const nombreArchivo = src.substring(src.lastIndexOf('/') + 1);
+            descargarBtn.setAttribute('download', nombreArchivo);
+        }
         imagenActualIndex = index;
     }
 
