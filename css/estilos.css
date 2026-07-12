@@ -235,23 +235,22 @@ footer {
 /* Botón de descargar imagen - Ubicado en la parte superior izquierda del modal */
 .btn-descargar {
     position: absolute;
-    top: 10px;   /* Distancia desde el borde superior */
+    top: 5px;    /* Alineado con la altura visual del botón de cerrar */
     left: 20px;  /* Distancia desde el borde izquierdo */
     color: var(--eva-verde);
+    font-size: 38px; /* Tamaño consistente con los controles del modal */
     cursor: pointer;
     transition: var(--transicion);
     z-index: 2001;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
+    user-select: none;
 }
 
-/* Efecto hover en el botón de descarga (cambio a naranja con sombra drop-shadow neón) */
+/* Efecto hover en el botón de descarga (cambio a naranja con sombra neón) */
 .btn-descargar:hover {
     color: var(--eva-naranja);
-    filter: drop-shadow(0 0 8px var(--eva-naranja)) drop-shadow(0 0 15px var(--eva-naranja));
-    transform: scale(1.15);
+    text-shadow: 0 0 10px var(--eva-naranja);
+    transform: scale(1.1);
 }
 
 .perfil-piloto {
