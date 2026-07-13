@@ -15,7 +15,7 @@
         <nav>
             <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
 
-            <a href="biblioteca.html"><i class="fa-solid fa-palette"></i> Galeria de Dibujos</a>
+            <a href="biblioteca.html"><i class="fa-solid fa-palette"></i> Galería</a>
 
             <a href="multimedia.html"><i class="fa-solid fa-icons"></i> Multimedia</a>
             
@@ -25,24 +25,129 @@
         </nav>
     </header>
 
-    <!-- Contenido principal de la página (Corregido: se añade sección <main> para contenido multimedia) -->
     <main class="contenedor">
         <section class="multimedia-header">
-            <h1>Contenido Multimedia</h1>
-            <p>Sección destinada a vídeos, música y otros contenidos interactivos.</p>
+            <h1>Multimedia</h1>
+            <p>Mi bitácola personal. Fotos, videos, audios y pensamientos.</p>
+        </section>
+
+        <section class="filtros-multimedia">
+            <div class="grid-tech">
+                <button class="tech-card filtro-btn active" data-filtro="todos">Todo</button>
+                <button class="tech-card filtro-btn" data-filtro="imagen">Imágenes</button>
+                <button class="tech-card filtro-btn" data-filtro="video">Vídeos</button>
+                <button class="tech-card filtro-btn" data-filtro="audio">Audios</button>
+                <button class="tech-card filtro-btn" data-filtro="texto">Texto</button>
+            </div>
+        </section>
+
+        <section class="grid-multimedia">
+            <!-- Tarjeta de TEXTO -->
+            <article class="media-card media-texto" data-tipo="texto">
+                <div class="media-header">
+                    <i class="fa-solid fa-comment"></i>
+                    <span class="media-tipo">Pensamiento</span>
+                </div>
+                <div class="media-contenido">
+                    <p class="media-preview">"A veces solo necesitas un momento de silencio para entender todo el ruido que tenías en la cabeza."</p>
+                    <p class="media-descripcion" style="display: none;">A veces solo necesitas un momento de silencio para entender todo el ruido que tenías en la cabeza. Me gusta sentarme en mi balcón por la noche, con un café en la mano, y simplemente escuchar el silencio. Es en esos momentos donde las ideas fluyen y la mente se despeja por completo.</p>
+                </div>
+                <div class="media-footer">
+                    <span class="media-fecha">12 de Julio, 2026</span>
+                    <button class="btn-ver-mas">Ver completo</button>
+                </div>
+            </article>
+
+            <!-- Tarjeta de FOTO -->
+            <article class="media-card media-foto" data-tipo="imagen">
+                <div class="media-header">
+                    <i class="fa-solid fa-image"></i>
+                    <span class="media-tipo">Foto</span>
+                </div>
+                <div class="media-contenido">
+                    <img src="assets/img/imgCris.jpg" alt="Foto personal" class="media-img">
+                    <p class="media-descripcion" style="display: none;">Un café y el silencio de la noche. Mi momento favorito del día. Siempre busco esos instantes donde el mundo se detiene y puedo respirar tranquilo. La fotografía me ayuda a capturar esos momentos efímeros que de otra forma se me olvidarían.</p>
+                </div>
+                <div class="media-footer">
+                    <span class="media-fecha">11 de Julio, 2026</span>
+                    <button class="btn-ver-mas">Ver completo</button>
+                </div>
+            </article>
+
+            <!-- Tarjeta de VIDEO -->
+            <article class="media-card media-video" data-tipo="video">
+                <div class="media-header">
+                    <i class="fa-solid fa-video"></i>
+                    <span class="media-tipo">Video</span>
+                </div>
+                <div class="media-contenido">
+                    <div class="media-video-placeholder">
+                        <i class="fa-solid fa-play-circle"></i>
+                        <p>Video: Mi proceso de dibujo</p>
+                    </div>
+                    <p class="media-descripcion" style="display: none;">Time-lapse de una hora de dibujo comprimido en 30 segundos. Usé Krita para grabar la pantalla mientras dibujaba este retrato. El proceso fue tedioso pero muy satisfactorio. Cada trazo tiene su propia historia.</p>
+                </div>
+                <div class="media-footer">
+                    <span class="media-fecha">10 de Julio, 2026</span>
+                    <button class="btn-ver-mas">Ver completo</button>
+                </div>
+            </article>
+
+            <!-- Tarjeta de AUDIO -->
+            <article class="media-card media-audio" data-tipo="audio">
+                <div class="media-header">
+                    <i class="fa-solid fa-music"></i>
+                    <span class="media-tipo">Audio</span>
+                </div>
+                <div class="media-contenido">
+                    <div class="media-audio-player">
+                        <i class="fa-solid fa-headphones"></i>
+                        <p>Canción recomendada: "Let It Happen" - Tame Impala</p>
+                    </div>
+                    <p class="media-descripcion" style="display: none;">La canción que mejor define mi estado de ánimo esta semana. "Let It Happen" de Tame Impala es una obra maestra de la psicodelia moderna. Los sintetizadores, la batería hipnótica y la voz etérea de Kevin Parker crean una experiencia auditiva única que te transporta a otro nivel de conciencia.</p>
+                </div>
+                <div class="media-footer">
+                    <span class="media-fecha">9 de Julio, 2026</span>
+                    <button class="btn-ver-mas">Ver completo</button>
+                </div>
+            </article>
         </section>
     </main>
 
-    <section class="tech-stack">
-            <h2>[Contenido multimedia]</h2>
-            <div class="grid-tech">
-                <div class="tech-card">Todo</div>
-                <div class="tech-card">Imágenes</div>
-                <div class="tech-card">Vídeos</div>
-                <div class="tech-card">Audios</div>
-                
+    <!-- Modal de vista completa multimedia -->
+    <div id="modal-media" class="modal-media">
+        <div class="modal-media-content">
+            <span class="cerrar-media">&times;</span>
+            <div class="modal-media-body">
+                <div class="modal-media-tipo">
+                    <i id="modal-media-icon"></i>
+                    <span id="modal-media-tipo-text"></span>
+                </div>
+                <div id="modal-media-imagen" class="modal-media-imagen" style="display: none;">
+                    <img src="" alt="" id="modal-media-img">
+                </div>
+                <div id="modal-media-video" class="modal-media-video" style="display: none;">
+                    <div class="media-video-placeholder">
+                        <i class="fa-solid fa-play-circle"></i>
+                        <p>Video: Mi proceso de dibujo</p>
+                    </div>
+                </div>
+                <div id="modal-media-audio" class="modal-media-audio" style="display: none;">
+                    <div class="media-audio-player">
+                        <i class="fa-solid fa-headphones"></i>
+                        <p>Canción recomendada: "Let It Happen" - Tame Impala</p>
+                    </div>
+                </div>
+                <div id="modal-media-texto" class="modal-media-texto" style="display: none;">
+                    <p id="modal-media-texto-content"></p>
+                </div>
+                <p id="modal-media-descripcion" class="modal-media-descripcion"></p>
+                <div class="modal-media-footer">
+                    <span id="modal-media-fecha" class="media-fecha"></span>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
 
  <!-- Pie de página (Footer) con enlaces a redes sociales y créditos -->
     <footer id="redes">

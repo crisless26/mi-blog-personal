@@ -15,7 +15,7 @@
         <nav>
             <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
 
-            <a href="biblioteca.html"><i class="fa-solid fa-palette"></i> Galeria de Dibujos</a>
+            <a href="biblioteca.html"><i class="fa-solid fa-palette"></i> Galería</a>
 
             <a href="multimedia.html"><i class="fa-solid fa-icons"></i> Multimedia</a>
             
@@ -42,15 +42,76 @@
         <section id="feed-reciente" class="contenedor-posts">
             <h2>Publicaciones Recientes</h2>
             
-            <!-- Inicio Post: Artículo individual de prueba (Corregido: ahora está dentro de <main> y <section>) -->
             <article class="post-card">
-                <h2>Prueba de post</h2>
+                <h2>Bienvenido a mi espacio digital</h2>
                 <span class="fecha">10 de Julio, 2026</span>
-                <!-- Imagen del post (Corregido: se añade la clase 'post-img' definida en estilos.css) -->
-                <img src="assets/img/imgCris.jpg" alt="foto mia" class="post-img">
-                <p>Aquí puede ir una descripción de la publicación.</p>
+                <img src="assets/img/imgCris.jpg" alt="Foto de perfil de CrisLoQueSea" class="post-img">
+                <p class="resumen">Este es mi espacio personal donde comparto mis dibujos, gustos y todo lo que me gusta. Bienvenido a mi rincón en internet.</p>
+                <div class="contenido-completo" style="display: none;">
+                    <p>Este es mi espacio personal donde comparto mis dibujos, gustos y todo lo que me gusta. Bienvenido a mi rincón en internet.</p>
+                    <p>Aquí encontrarás una colección de mis trabajos digitales, recomendaciones de series, películas, videojuegos y mucho más. Mi objetivo es crear un lugar donde pueda expresar mi creatividad y conectar con personas que compartan mis intereses.</p>
+                    <p>Gracias por visitar mi blog. Espero que disfrutes del contenido tanto como yo disfruto creándolo.</p>
+                </div>
+                <div class="post-actions">
+                    <button class="btn-read" data-post="0">Leer más</button>
+                    <button class="btn-comments" data-post="0">Comentar</button>
+                </div>
+                <div class="comentarios-seccion" style="display: none;">
+                    <h3>Deja tu comentario</h3>
+                    <form class="form-comentario">
+                        <input type="text" placeholder="Tu nombre" required>
+                        <textarea placeholder="Escribe tu comentario..." rows="4" required></textarea>
+                        <button type="submit" class="btn-enviar">Enviar comentario</button>
+                    </form>
+                </div>
             </article>
-            <!-- fin Post -->
+
+            <article class="post-card">
+                <h2>Mi primer dibujo digital</h2>
+                <span class="fecha">11 de Julio, 2026</span>
+                <img src="assets/img/dibujo1.jpg" alt="Mi primer dibujo digital" class="post-img">
+                <p class="resumen">Hoy completé mi primer dibujo digital. Fue un reto aprender a usar la tableta pero valió la pena.</p>
+                <div class="contenido-completo" style="display: none;">
+                    <p>Hoy completé mi primer dibujo digital. Fue un reto aprender a usar la tableta pero valió la pena.</p>
+                    <p>Empecé a dibujar hace unas semanas y cada día aprendo algo nuevo. La curva de aprendizaje es pronunciada pero muy satisfactoria. Me inspiré en los estilos que veo en Tumblr y Pinterest.</p>
+                    <p>Pronto subiré más dibujos a la galería. Si quieres ver el proceso, sígueme en Instagram @crisdibujitosfeos.</p>
+                </div>
+                <div class="post-actions">
+                    <button class="btn-read" data-post="1">Leer más</button>
+                    <button class="btn-comments" data-post="1">Comentar</button>
+                </div>
+                <div class="comentarios-seccion" style="display: none;">
+                    <h3>Deja tu comentario</h3>
+                    <form class="form-comentario">
+                        <input type="text" placeholder="Tu nombre" required>
+                        <textarea placeholder="Escribe tu comentario..." rows="4" required></textarea>
+                        <button type="submit" class="btn-enviar">Enviar comentario</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <h2>Album que no me puedo dejar de escuchar</h2>
+                <span class="fecha">12 de Julio, 2026</span>
+                <p class="resumen">Últimamente no paro de escuchar el álbum "Currents" de Tame Impala. Cada canción es una obra maestra.</p>
+                <div class="contenido-completo" style="display: none;">
+                    <p>Últimamente no paro de escuchar el álbum "Currents" de Tame Impala. Cada canción es una obra maestra.</p>
+                    <p>Kevin Parker logró crear un sonido único que mezcla psicodelia, pop y synth. Canciones como "Let It Happen" y "The Less I Know the Better" son adictivas.</p>
+                    <p>Si te gusta la música psicodélica y los sintetizadores, este álbum es obligatorio. Yo lo pongo mientras dibujo y se me hace el mejor combo.</p>
+                </div>
+                <div class="post-actions">
+                    <button class="btn-read" data-post="2">Leer más</button>
+                    <button class="btn-comments" data-post="2">Comentar</button>
+                </div>
+                <div class="comentarios-seccion" style="display: none;">
+                    <h3>Deja tu comentario</h3>
+                    <form class="form-comentario">
+                        <input type="text" placeholder="Tu nombre" required>
+                        <textarea placeholder="Escribe tu comentario..." rows="4" required></textarea>
+                        <button type="submit" class="btn-enviar">Enviar comentario</button>
+                    </form>
+                </div>
+            </article>
         </section>
     </main>
 
